@@ -1,0 +1,5 @@
+>javac ServerDemo.java
+ java ServerDemo
+
+>javac ClientDemo.java
+ java ClientDemo

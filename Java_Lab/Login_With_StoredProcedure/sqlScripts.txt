@@ -1,0 +1,8 @@
+Delimiter &&
+Create Procedure a()
+  begin
+  select * from javalab;
+  select * from marjava;
+  End &&
+
+call a() &&

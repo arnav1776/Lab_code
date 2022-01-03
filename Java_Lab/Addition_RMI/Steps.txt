@@ -1,0 +1,12 @@
+Server
+
+javac Addition.java
+javac AdditionServer.java
+start rmiregistry
+java AdditionServer
+
+Client
+
+javac AdditionInterface.java
+javac AdditionClient.java
+java AdditionClient
