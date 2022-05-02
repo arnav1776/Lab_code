@@ -1,0 +1,25 @@
+I=imread('monkey.jpg');
+G=imrotate(I,90);
+H=imresize(I,[56,56]);
+K=imresize(I,0.6);
+F=imtranslate(I,[40,40]);
+J=imcrop(I,[72 60 80 140]);
+
+subplot(3,2,1);
+imshow(I);
+title('Original Image');
+subplot(3,2,2);
+imshow(G);
+title('Roation Image by 90');
+subplot(3,2,3);
+imshow(H);
+title('Scaled Image');
+subplot(3,2,4);
+imshow(K);
+title('Scaled Image by scaling factor 0.6 ');
+subplot(3,2,5);
+imshow(F);
+title('Translated Image');
+subplot(3,2,6);
+imshow(J);
+title('Cropped Image');
