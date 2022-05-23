@@ -1,0 +1,16 @@
+I=imread('coin.jpg');
+subplot(2,2,1);
+imshow(I);
+title('originl image 1');
+Se=strel('disk',5);
+BW1=imdilate(I,Se);
+subplot(2,2,2);
+imshow(BW1);
+title('dilate image');
+subplot(2,2,3);
+imshow(I);
+title('original image 2');
+BW2=imerode(I,Se);
+subplot(2,2,4);
+imshow(BW2);
+title('erode image');

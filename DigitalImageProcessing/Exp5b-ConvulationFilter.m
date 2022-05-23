@@ -1,0 +1,26 @@
+I=imread('monkey.jpg');
+G=rgb2gray(I);
+subplot(2,3,1);
+imshow(G);
+title('GreyScale Image');
+h1=[ 1 -2 -1 ; -1 5 -1 ; 1 -2 1 ];
+A=conv2(double(G),double(h1));
+subplot(2,3,2);
+imshow(A,[]);
+title('HPF');
+h2=[ -1 -1 -1 ; -1 9 -1 ; -1 -1 -1 ];
+B=conv2(double(G),double(h2));
+
+subplot(2,3,3);
+imshow(B,[]);
+title('Sharpening Filter');
+h3=fspecial('Unsharp',0.3);
+C=imfilter(G,h3);
+subplot(2,3,4);
+imshow(C,[]);
+title('Unsharp Filter');
+h4=fspecial('gaussian',[3 3],0.3);
+r=imfilter(G,h4);
+subplot(2,3,5);
+imshow(r,[]);
+title('Gaussian Filter');
